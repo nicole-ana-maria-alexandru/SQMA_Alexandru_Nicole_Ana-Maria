@@ -1,0 +1,22 @@
+{
+  "name": "sqma_alexandru_nicole_ana-maria",
+  "version": "1.0.0",
+  "description": "masters sqma hw",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicole-ana-maria-alexandru/SQMA_Alexandru_Nicole_Ana-Maria.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicole-ana-maria-alexandru/SQMA_Alexandru_Nicole_Ana-Maria/issues"
+  },
+  "homepage": "https://github.com/nicole-ana-maria-alexandru/SQMA_Alexandru_Nicole_Ana-Maria#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
