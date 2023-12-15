@@ -22,12 +22,13 @@ pipeline {
 
     stage('Run OWASP Dependency-Check') {
         steps {
-            script {
-            //Dependency-Check installation
-            def depCheck = tool "OWASP Dependency-Check"
-            depCheck = depCheck.toLowerCase()
-            depCheck."dependencyCheck" additionalArguments: '--format JSON'
-            }
+            dependencyCheck additionalArguments: ''' 
+                        -o './'
+                        -s './'
+                        -f 'ALL' 
+                        --prettyPrint''', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
+            
+            dependencyCheckPublisher pattern: 'dependency-check-report.xml'
         }
     }
 
