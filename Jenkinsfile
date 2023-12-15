@@ -21,12 +21,18 @@ pipeline {
     }
     }
 
+    stage('Run OWASP Dependency-Check') {
+        steps {
+            script {
+            //Dependency-Check installation
+            def depCheck = tool 'OWASP Dependency-Check'
+            depCheck.dependencyCheck additionalArguments: '--format JSON'
+            }
+        }
+    }
+
     post {
     always {
-        // OWASP Dependency-Check for the pipeline
-        script {
-            dependencyCheck additionalArguments: '--format HTML'
-        }
         cleanWs()
     }
     }
