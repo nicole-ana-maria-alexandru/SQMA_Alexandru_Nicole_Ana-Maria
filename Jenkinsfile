@@ -24,12 +24,12 @@ pipeline {
         steps {
             script {
             //Dependency-Check installation
-            def depCheck = tool 'OWASP Dependency-Check'
+            def depCheck = tool "OWASP Dependency-Check"
             depCheck.dependencyCheck additionalArguments: '--format JSON'
             }
         }
     }
-    
+
     }
 
 
