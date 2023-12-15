@@ -20,6 +20,14 @@ pipeline {
         }
     }
 
+    stage('Install Dependencies Before OWASP') {
+            steps {
+                script {
+                    bat 'npm install'
+                }
+            }
+        }
+
     stage('Run OWASP Dependency-Check') {
         steps {
             dependencyCheck additionalArguments: ''' 
