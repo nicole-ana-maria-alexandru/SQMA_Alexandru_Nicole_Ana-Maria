@@ -19,7 +19,6 @@ pipeline {
         build job: 'Test-Suite-3-Job', parameters: [string(name: 'TEST_TO_RUN', value: 'negativeWithdrawal')]
         }
     }
-    }
 
     stage('Run OWASP Dependency-Check') {
         steps {
@@ -30,6 +29,9 @@ pipeline {
             }
         }
     }
+    
+    }
+
 
     post {
     always {
