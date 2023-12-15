@@ -23,6 +23,10 @@ pipeline {
 
     post {
     always {
+        // OWASP Dependency-Check for the pipeline
+        script {
+            dependencyCheck additionalArguments: '--format HTML'
+        }
         cleanWs()
     }
     }
