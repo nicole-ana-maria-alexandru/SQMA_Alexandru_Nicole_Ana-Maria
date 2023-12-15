@@ -1,4 +1,4 @@
-// withdrawalDeposit.test.js
+// withdrawalDeposit test case
 const ATM = require('./atmOperations');
 
 test('withdrawal and deposit operations', () => {

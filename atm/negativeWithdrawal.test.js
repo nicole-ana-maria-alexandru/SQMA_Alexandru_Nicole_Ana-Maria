@@ -1,4 +1,4 @@
-// negativeWithdrawal test suite
+// negativeWithdrawal test case
 const ATM = require('./atmOperations');
 
 test('withdraw a negative amount', () => {
