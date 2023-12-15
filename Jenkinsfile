@@ -25,7 +25,8 @@ pipeline {
             script {
             //Dependency-Check installation
             def depCheck = tool "OWASP Dependency-Check"
-            depCheck.dependencyCheck additionalArguments: '--format JSON'
+            depCheck = depCheck.toLowerCase()
+            depCheck."dependencyCheck" additionalArguments: '--format JSON'
             }
         }
     }
